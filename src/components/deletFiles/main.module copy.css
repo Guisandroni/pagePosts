@@ -1,0 +1,71 @@
+
+
+.main{
+    padding: 2rem;
+    background-color: var(--gray2);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil{
+    display: flex;
+    gap: 2rem;
+}
+
+
+.nome{
+    color: var(--white);
+}
+
+.nome p{
+    color: var(--gray4);
+}
+
+.comentario{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.comentario textarea{
+
+    height: 6rem;
+    border-radius: 8px;
+    border: 2px solid var(--green);
+    background-color: var(--gray1);
+}
+
+
+
+.comentario button{
+    width: 6rem;
+    height: 3rem;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--green);
+    border-style: none;
+}
+
+
+.comentario p,textarea{
+    color: var(--white);
+}
+
+.linkProjeto{
+    color: var(--green-light);
+    text-decoration: none;
+
+}
+
+.hashtag{
+    color: var(--green-light);
+}

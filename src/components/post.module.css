@@ -1,0 +1,78 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfil{
+    display: flex;
+    gap: 1rem;
+}
+
+.perfilNome{
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+article{
+    background-color: var(--gray2);
+    border-radius: 8px;
+    padding: 2.5rem;  
+}
+
+.contentPerfil{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-top: 2rem;
+    
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+    border-top: 2px solid var(--gray3); 
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+
+}
+
+textarea{
+    height:6rem;
+    border-radius: 8px;
+    border: 2px solid var(--green);
+    background-color: var(--gray1);
+    
+
+}
+
+.btnPublic{
+    height: 2.5rem;
+    width: 6rem;
+    padding: 0.5rem 0;
+    border-radius: 8px;
+    color: var(--white);
+    background-color: var(--green);
+    border-style: none;
+}
+
+.btnPublic:hover{
+    cursor: pointer;
+    background-color:  var(--green-light);
+}
+
+.form strong,textarea{
+    color: var(--white);
+    
+}
+
+
+a{
+    color: var(--green-light);
+    text-decoration: none;
+}
+
+

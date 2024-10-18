@@ -1,0 +1,19 @@
+
+
+.avatar{
+    width: calc(2rem + 12px);
+    height: calc(2rem + 12px);
+    border-radius: 8px;
+    position:relative;
+    z-index: 1;
+}
+
+
+.avatarWithBorder{
+    width: calc(2rem + 12px);
+    height: calc(2rem + 12px);
+    border-radius: 8px;
+    outline: 2px solid var(--green);
+    position:relative;
+    z-index: 1;
+}

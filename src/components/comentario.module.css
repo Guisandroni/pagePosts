@@ -1,0 +1,86 @@
+
+
+.comentarioBox{
+    background-color: var(--gray3);
+    padding: 1rem;
+    border-radius: 8px;
+    width: 100%;
+     gap: 0.5rem;
+     display: flex;
+     justify-content: space-between;
+   
+   
+}
+
+.comentarioContainer{
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   gap: 1rem;
+}
+.comentario{
+    display: flex;
+    flex-wrap:nowrap;
+    width: 100vm;
+    gap:1rem;
+}
+
+.perfil{
+   height: 3rem;
+   border-radius: 8px;
+}
+
+.header div{
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    
+}
+
+.header{
+    gap:2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header div strong, p{
+    color: var(--white);
+}
+
+.header p{
+    font-size: 0.95rem;
+}
+
+.header datetime{
+    font-size: 0.8rem;
+}
+
+
+.footer{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.btnTrash{
+    background-color: var(--gray3);
+    border-style: none;
+    color: var(--white);
+    cursor: pointer;
+}
+
+.btnTrash:hover{
+    color: red
+}
+
+
+.btnLike{
+    color: var(--gray4);
+    background-color: var(--gray2);
+    border-style: none;
+    margin: 0.5rem;
+}
+
+.btnLike:hover{
+color: var(--white);
+cursor: pointer;
+}
