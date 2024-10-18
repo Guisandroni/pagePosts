@@ -6,6 +6,10 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { ptBR } from "date-fns/locale";
 //usando o date-fns para formatação de data
 
+interface postTypeContent{
+  post: propsPost,
+}
+
 interface Author{
 
   name: string;
@@ -13,7 +17,8 @@ interface Author{
   avatarUrl: string;
 }
 
-interface propsPost{
+export interface propsPost{
+  id: number,
   author:Author;
   publishDate:Date;
   content:Content[];
@@ -24,19 +29,19 @@ interface Content{
   content: string,
 }
 
-export function Post({author,publishDate,content} : propsPost) {
+export function Post({post} : postTypeContent) {
 
 
-const publishDateFormat = format(publishDate,"dd 'de' LLLL 'há' HH:mm 'h",{
+const publishDateFormat = format(post.publishDate,"dd 'de' LLLL 'há' HH:mm 'h",{
   locale: ptBR,
 })
 
-  const publishDateBefore = formatDistanceToNow(publishDate,{
+  const publishDateBefore = formatDistanceToNow(post.publishDate,{
     locale: ptBR,
   })
 
 
-  const timeDatePublish =  publishDate.toISOString()
+  const timeDatePublish =  post.publishDate.toISOString()
 
 
   const [comentarios, setComentarios] = useState([
@@ -85,12 +90,12 @@ const publishDateFormat = format(publishDate,"dd 'de' LLLL 'há' HH:mm 'h",{
     <article>
       <header  className={styles.header}>
         <div className={styles.perfil} >
-          <Avatar hasBorder src={author.avatarUrl}/>
+          <Avatar hasBorder src={post.author.avatarUrl}/>
 
           <div className={styles.perfilNome}>
 
-            <strong >{author.name}</strong>
-            <span>{author.role}</span>
+            <strong >{post.author.name}</strong>
+            <span>{post.author.role}</span>
           </div>
         </div>
         <time title={publishDateFormat} dateTime={timeDatePublish}  >
@@ -108,7 +113,7 @@ const publishDateFormat = format(publishDate,"dd 'de' LLLL 'há' HH:mm 'h",{
           <a href="">#NovoProjeto</a>
         </p> */}
 
-        {content.map(line =>{
+        {post.content.map(line =>{
           if (line.type === 'paragraph'){
             return <p key={line.content}>{line.content}</p>;
           } else if ( line.type === 'link'){

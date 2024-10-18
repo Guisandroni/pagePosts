@@ -5,11 +5,11 @@ import styles from "./App.module.css";
 
 import "./global.css";
 import { Sidebar } from "./components/sidebar.tsx";
-import { Post } from "./components/post.tsx";
+import { Post, propsPost } from "./components/post.tsx";
 
 // publishDate: Date,
 // content: String,
-const posts = [
+const posts : propsPost[] = [
   {
     id: 1,
     author: {
@@ -88,9 +88,7 @@ export function App() {
             return (
               <Post 
               key={post.id}
-              author={post.author}
-              content={[{ type: 'paragraph', content:'teste' }]}  
-              publishDate={post.publishDate}
+              post = {post}
               />
             )
           })}
