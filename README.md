@@ -1,50 +1,33 @@
-# React + TypeScript + Vite
+## Rede Social — React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Imagem do projeto](public/image.png)
 
-Currently, two official plugins are available:
+### Visão geral
+Projeto simples de uma página de rede social construído com React e Vite. O foco é nos princípios básicos do React: componentização, uso de `props` e gerenciamento de estado com `useState`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tecnologias
+- **React 18**
+- **Vite** (desenvolvimento rápido com HMR)
+- **ESLint** (regras básicas de qualidade)
 
-## Expanding the ESLint configuration
+### Conceitos React utilizados
+- **Componentes**: divisão da interface em partes reutilizáveis
+- **Props**: passagem de dados entre componentes
+- **useState**: controle de estado local e atualização reativa
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Como executar
+```bash
+npm install
+npm run dev
 ```
+Abra o endereço mostrado no terminal (geralmente `http://localhost:5173`).
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Scripts
+- **dev**: inicia o servidor de desenvolvimento
+- **build**: gera a versão de produção
+- **preview**: visualiza a build localmente
+- **lint**: roda as verificações do ESLint
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Estrutura (simplificada)
+- `public/` — ativos estáticos (ex.: `image.png`)
+- `src/` — componentes e estilos da aplicação
